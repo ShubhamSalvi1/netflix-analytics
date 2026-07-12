@@ -127,7 +127,8 @@ users (1) ────────< (many) watch_history (many) >─────
 - `users.user_id → watch_history.user_id` — one-to-many (one user can have many watch records)
 - `content.content_id → watch_history.content_id` — one-to-many (one title can be watched many times)
 
-[ADD DATABASE SCHEMA DIAGRAM]
+<img width="1005" height="287" alt="Schema" src="https://github.com/user-attachments/assets/568262d7-8aa7-45f0-bf7b-5d74483f9697" />
+
 
 ---
 
@@ -190,7 +191,8 @@ Total Minutes = SUM(watch_history[minutes_watched])
 - Movie vs. Series consumption (chart)
 - Country slicer for interactive filtering
 
-[ADD DASHBOARD SCREENSHOT]
+<img width="1297" height="727" alt="Dashboard" src="https://github.com/user-attachments/assets/5b0563a5-2ab1-4146-93fd-80a60d5c43f3" />
+
 
 ---
 
@@ -198,13 +200,12 @@ Total Minutes = SUM(watch_history[minutes_watched])
 
 > Replace each placeholder below with your actual query/dashboard results before publishing.
 
-- **Total platform watch time:** [INSERT RESULT]
-- **Most-watched genre:** [INSERT RESULT], accounting for approximately [INSERT RESULT]% of total watch time
-- **Top-performing subscription plan by engagement:** [INSERT RESULT]
-- **Average watch time per session:** [INSERT RESULT] minutes
-- **Movie vs. Series split:** [INSERT RESULT]% Movies vs. [INSERT RESULT]% Series
-- **Top user engagement concentration:** The top 10 users account for [INSERT RESULT]% of total platform watch time
-- **Country-level observation:** [INSERT RESULT]
+- **Total platform watch time:** 228K
+- **Most-watched genre:** Horror, accounting for approximately 32% of total watch time
+- **Top-performing subscription plan by engagement:** Premium
+- **Average watch time per user:** 1.14K minutes
+- **Movie vs. Series split:** 51.12% Movies vs. 48.8% Series
+- **Top user engagement concentration:** The top 10 users account forapproximately 9% of total platform watch time
 
 ---
 
@@ -234,10 +235,10 @@ streaming-platform-analytics/
 │   ├── create_tables.sql
 │   └── analysis_queries.sql
 ├── powerbi/
-│   └── streaming_engagement_dashboard.pbix
+│   └── netflix.pbix
 ├── images/
-│   ├── dashboard-preview.png
-│   └── database-schema.png
+│   ├── Dashboard.png
+│   └── Schema.png
 └── README.md
 ```
 
@@ -249,8 +250,8 @@ streaming-platform-analytics/
 
 ```sql
 -- Create the database
-CREATE DATABASE streaming_platform;
-USE streaming_platform;
+CREATE DATABASE netflix_challenge;
+USE netflix_challenge;
 
 -- Run the schema script
 SOURCE sql/create_tables.sql;
@@ -259,7 +260,7 @@ SOURCE sql/create_tables.sql;
 ### 2. Import the CSV files
 
 1. Open MySQL Workbench (or your preferred client).
-2. Select the `streaming_platform` database.
+2. Select the `netflix_challenge` database.
 3. Use **Table Data Import Wizard** (or `LOAD DATA INFILE`) to import each file:
    - `data/users.csv` → `users` table
    - `data/content.csv` → `content` table
@@ -273,7 +274,7 @@ Open `sql/analysis_queries.sql` in your SQL client and run each query section to
 ### 4. Open the Power BI dashboard
 
 1. Install [Power BI Desktop](https://powerbi.microsoft.com/desktop/) (free).
-2. Open `powerbi/streaming_engagement_dashboard.pbix`.
+2. Open `powerbi/Dashboard.pbix`.
 3. If prompted, update the data source connection to point to your local MySQL database or the CSV files in `data/`.
 4. Click **Refresh** to load the data.
 
@@ -318,6 +319,8 @@ Open `sql/analysis_queries.sql` in your SQL client and run each query section to
 
 ## Screenshots
 
-[ADD DASHBOARD SCREENSHOT]
 
-[ADD DATABASE SCHEMA DIAGRAM]
+<img width="1297" height="727" alt="Dashboard" src="https://github.com/user-attachments/assets/b1cec0eb-b27b-46b6-be9a-cd9b5ab84245" />
+<img width="1005" height="287" alt="Schema" src="https://github.com/user-attachments/assets/ba59f1e1-53cc-4e98-90da-cdfa1515234a" />
+
+
