@@ -191,8 +191,19 @@ Total Minutes = SUM(watch_history[minutes_watched])
 - Movie vs. Series consumption (chart)
 - Country slicer for interactive filtering
 
-<img width="1297" height="727" alt="Dashboard" src="https://github.com/user-attachments/assets/5b0563a5-2ab1-4146-93fd-80a60d5c43f3" />
+<img width="1297" height="727" alt="Dashboard" src="images/Dashboard.png" />
 
+## Dashboard Walkthrough
+
+**KPI row** — Total Minutes Watched, Total Users, Total Titles, Avg Minutes/User give an at-a-glance health check before drilling into any segment.
+
+**Engagement by Genre** — Identifies which content categories drive the most watch time, useful for content acquisition/investment prioritization.
+
+**Engagement by Plan Type** — Compares Basic/Standard/Premium viewing behavior, relevant to pricing and upsell strategy.
+
+**Top Users by Engagement** — Surfaces the platform's most active "power users," a segment worth targeting for retention or loyalty programs.
+
+**Movie vs. Series Split** — Tracks content-format preference at a platform level, informing content mix decisions.
 
 ---
 
@@ -204,7 +215,7 @@ Total Minutes = SUM(watch_history[minutes_watched])
 - **Most-watched genre:** Horror, accounting for approximately 32% of total watch time
 - **Top-performing subscription plan by engagement:** Premium
 - **Average watch time per user:** 1.14K minutes
-- **Movie vs. Series split:** 51.12% Movies vs. 48.8% Series
+- **Movie vs. Series split:** 51.12% Movies vs. 48.88% Series
 - **Top user engagement concentration:** The top 10 users account forapproximately 9% of total platform watch time
 
 ---
@@ -316,11 +327,5 @@ Open `sql/analysis_queries.sql` in your SQL client and run each query section to
 > **Netflix-Style Streaming Platform User Engagement Analysis** — Designed a relational MySQL database (users, content, watch history) and used SQL joins and aggregations to analyze engagement across genres, subscription plans, and countries. Built an interactive Power BI dashboard with custom DAX measures to visualize key engagement metrics, translating query results into business-style insights for a portfolio-ready analytics project.
 
 ---
-
-## Screenshots
-
-
-<img width="1297" height="727" alt="Dashboard" src="https://github.com/user-attachments/assets/b1cec0eb-b27b-46b6-be9a-cd9b5ab84245" />
-<img width="1005" height="287" alt="Schema" src="https://github.com/user-attachments/assets/ba59f1e1-53cc-4e98-90da-cdfa1515234a" />
 
 
